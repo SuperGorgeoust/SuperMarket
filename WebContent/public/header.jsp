@@ -72,11 +72,10 @@
 												<div class="multi-gd-img">
 													<ul class="multi-column-dropdown">
 														<h6>所有种类</h6>
-														<li><a href="groceries.jsp">Dals & Pulses</a></li>
+														<li><a href="groceries.jsp">杂粮</a></li>
 														<li><a href="groceries.jsp">杏仁</a></li>
 														<li><a href="groceries.jsp">腰果</a></li>
 														<li><a href="groceries.jsp">坚果</a></li>
-														<li><a href="groceries.jsp"> Mukhwas </a></li>
 														<li><a href="groceries.jsp">大米</a></li>
 													</ul>
 												</div>	
