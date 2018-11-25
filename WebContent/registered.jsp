@@ -46,8 +46,8 @@
 	<div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
-				<li><a href="index.jsp"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-				<li class="active">Register Page</li>
+				<li><a href="index.jsp"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>主页</a></li>
+				<li class="active">注册页面</li>
 			</ol>
 		</div>
 	</div>
@@ -55,33 +55,33 @@
 <!-- register -->
 	<div class="register">
 		<div class="container">
-			<h2>Register Here</h2>
+			<h2>新用户注册</h2>
 			<div class="login-form-grids">
-				<h5>profile information</h5>
+				<h5>个人信息</h5>
 				<form action="#" method="post">
-					<input type="text" placeholder="First Name..." required=" " >
-					<input type="text" placeholder="Last Name..." required=" " >
+					<input type="text" placeholder="名字..." required=" " >
+					<input type="text" placeholder="电话..." required=" " >
 				</form>
 				<div class="register-check-box">
 					<div class="check">
-						<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>Subscribe to Newsletter</label>
+						<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>订阅新品通知</label>
 					</div>
 				</div>
-				<h6>Login information</h6>
+				<h6>登录信息</h6>
 					<form action="#" method="post">
-					<input type="email" placeholder="Email Address" required=" " >
-					<input type="password" placeholder="Password" required=" " >
-					<input type="password" placeholder="Password Confirmation" required=" " >
+					<input type="email" placeholder="电子邮箱" required=" " >
+					<input type="password" placeholder="密码" required=" " >
+					<input type="password" placeholder="请确认密码" required=" " >
 					<div class="register-check-box">
 						<div class="check">
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>I accept the terms and conditions</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>我已阅读并接受以上条款协议</label>
 						</div>
 					</div>
-					<input type="submit" value="Register">
+					<input type="submit" value="注册">
 				</form>
 			</div>
 			<div class="register-home">
-				<a href="index.jsp">Home</a>
+				<a href="index.jsp">回到主页</a>
 			</div>
 		</div>
 	</div>

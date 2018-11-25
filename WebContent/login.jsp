@@ -46,7 +46,7 @@
 	<div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
-				<li><a href="index.jsp"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+				<li><a href="index.jsp"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>主页</a></li>
 				<li class="active">登录页面</li>
 			</ol>
 		</div>
@@ -59,8 +59,8 @@
 		
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
 				<form>
-					<input type="email" placeholder="Email Address" required=" " >
-					<input type="password" placeholder="Password" required=" " >
+					<input type="email" placeholder="电子邮箱" required=" " >
+					<input type="password" placeholder="密码" required=" " >
 					<div class="forgot">
 						<a href="#">忘记密码?</a>
 					</div>
