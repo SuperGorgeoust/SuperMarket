@@ -90,10 +90,8 @@
 												<div class="multi-gd-img">
 													<ul class="multi-column-dropdown">
 														<h6>所有种类</h6>
-														<li><a href="household.jsp">炊具</a></li>
-														<li><a href="household.jsp">除尘锅</a></li>
+														<li><a href="household.jsp">除尘用具</a></li>
 														<li><a href="household.jsp">洗涤器</a></li>
-														<li><a href="household.jsp">除尘布</a></li>
 														<li><a href="household.jsp">拖把 </a></li>
 														<li><a href="household.jsp">厨具</a></li>
 													</ul>
@@ -110,11 +108,9 @@
 												<div class="multi-gd-img">
 													<ul class="multi-column-dropdown">
 														<h6>所有种类</h6>
-														<li><a href="personalcare.jsp">婴儿肥皂</a></li>
-														<li><a href="personalcare.jsp">有婴儿护理配件</a></li>
+														<li><a href="personalcare.jsp">婴儿护理配件</a></li>
 														<li><a href="personalcare.jsp">婴儿油和洗发水</a></li>
 														<li><a href="personalcare.jsp">婴儿面霜和乳液</a></li>
-														<li><a href="personalcare.jsp"> 婴儿爽身粉</a></li>
 														<li><a href="personalcare.jsp">尿布和湿巾</a></li>
 													</ul>
 												</div>
@@ -129,10 +125,8 @@
 												<div class="multi-gd-img">
 													<ul class="multi-column-dropdown">
 														<h6>所有种类</h6>
-														<li><a href="packagedfoods.jsp">婴儿食品</a></li>
 														<li><a href="packagedfoods.jsp">甜点</a></li>
 														<li><a href="packagedfoods.jsp">饼干</a></li>
-														<li><a href="packagedfoods.jsp">谷物早餐</a></li>
 														<li><a href="packagedfoods.jsp">罐头食品</a></li>
 														<li><a href="packagedfoods.jsp">巧克力和糖果</a></li>
 													</ul>
@@ -149,11 +143,9 @@
 												<div class="multi-gd-img">
 													<ul class="multi-column-dropdown">
 														<h6>所有种类</h6>
-														<li><a href="beverages.jsp">绿茶</a></li>
-														<li><a href="beverages.jsp">研磨咖啡</a></li>
+														<li><a href="beverages.jsp">奶制饮品</a></li>
 														<li><a href="beverages.jsp">凉茶</a></li>
 														<li><a href="beverages.jsp">速溶咖啡</a></li>
-														<li><a href="beverages.jsp">茶</a></li>
 														<li><a href="beverages.jsp">茶包</a></li>
 													</ul>
 												</div>
