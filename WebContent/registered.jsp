@@ -40,7 +40,7 @@
 	<jsp:include page="/public/header.jsp"></jsp:include>
 <!-- //header -->
 <!-- navigation -->
-	
+
 <!-- //navigation -->
 <!-- breadcrumbs -->
 	<div class="breadcrumbs">
