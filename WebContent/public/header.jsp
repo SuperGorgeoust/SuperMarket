@@ -95,7 +95,7 @@
 														<li><a href="household.jsp">除尘锅</a></li>
 														<li><a href="household.jsp">洗涤器</a></li>
 														<li><a href="household.jsp">除尘布</a></li>
-														<li><a href="household.jsp"> 拖把 </a></li>
+														<li><a href="household.jsp">拖把 </a></li>
 														<li><a href="household.jsp">厨具</a></li>
 													</ul>
 												</div>
@@ -163,7 +163,7 @@
 										</ul>
 									</li>
 									<li><a href="gourmet.jsp">美食推荐</a></li>
-									<li><a href="offers.jsp">商业合作</a></li>
+									<li><a href="offers.jsp">打折商品</a></li>
 									<li><a href="contact.jsp">联系我们</a></li>
 								</ul>
 							</div>
