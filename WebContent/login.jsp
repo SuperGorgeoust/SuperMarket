@@ -47,7 +47,7 @@
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
 				<li><a href="index.jsp"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-				<li class="active">Login Page</li>
+				<li class="active">登录页面</li>
 			</ol>
 		</div>
 	</div>
@@ -55,20 +55,20 @@
 <!-- login -->
 	<div class="login">
 		<div class="container">
-			<h2>Login Form</h2>
+			<h2>登录</h2>
 		
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
 				<form>
 					<input type="email" placeholder="Email Address" required=" " >
 					<input type="password" placeholder="Password" required=" " >
 					<div class="forgot">
-						<a href="#">Forgot Password?</a>
+						<a href="#">忘记密码?</a>
 					</div>
-					<input type="submit" value="Login">
+					<input type="submit" value="登录">
 				</form>
 			</div>
-			<h4>For New People</h4>
-			<p><a href="registered.jsp">Register Here</a> (Or) go back to <a href="index.jsp">Home<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></p>
+			<h4>新用户看这里</h4>
+			<p><a href="registered.jsp">点击注册</a> (或) 回到 <a href="index.jsp">主页<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></p>
 		</div>
 	</div>
 <!-- //login -->
