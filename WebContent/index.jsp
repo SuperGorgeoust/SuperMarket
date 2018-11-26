@@ -71,18 +71,18 @@
 	<div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
 	<div class="top-brands">
 		<div class="container">
-		<h2>Top selling offers</h2>
+		<h2>畅享优惠</h2>
 			<div class="grid_3 grid_5">
 				<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 					<ul id="myTab" class="nav nav-tabs" role="tablist">
-						<li role="presentation" class="active"><a href="#expeditions" id="expeditions-tab" role="tab" data-toggle="tab" aria-controls="expeditions" aria-expanded="true">Advertised offers</a></li>
-						<li role="presentation"><a href="#tours" role="tab" id="tours-tab" data-toggle="tab" aria-controls="tours">Today Offers</a></li>
+						<li role="presentation" class="active"><a href="#expeditions" id="expeditions-tab" role="tab" data-toggle="tab" aria-controls="expeditions" aria-expanded="true">广告优惠</a></li>
+						<li role="presentation"><a href="#tours" role="tab" id="tours-tab" data-toggle="tab" aria-controls="tours">今日优惠</a></li>
 					</ul>
 					<div id="myTabContent" class="tab-content">
 						<div role="tabpanel" class="tab-pane fade in active" id="expeditions" aria-labelledby="expeditions-tab">
 							<div class="agile-tp">
-								<h5>Advertised this week</h5>
-								<p class="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
+								<h5>本周刊登广告</h5>
+								<p class="w3l-ad">我们已经将所有广告优惠汇集到一个地方，因此您不会错过任何优惠信息。</p>
 							</div>
 							<div class="agile_top_brands_grids">
 								<div class="col-md-4 top_brand_left">
@@ -695,7 +695,7 @@
 <!--brands-->
 	<div class="brands">
 		<div class="container">
-		<h3>Brand Store</h3>
+		<h3>品牌店</h3>
 			<div class="brands-agile">
 				<div class="col-md-2 w3layouts-brand">
 					<div class="brands-w3l">
@@ -804,7 +804,7 @@
 <!-- new -->
 	<div class="newproducts-w3agile">
 		<div class="container">
-			<h3>New offers</h3>
+			<h3>新优惠</h3>
 				<div class="agile_top_brands_grids">
 					<div class="col-md-3 top_brand_left-1">
 						<div class="hover14 column">

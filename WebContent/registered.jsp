@@ -59,17 +59,19 @@
 			<div class="login-form-grids">
 				<h5>个人信息</h5>
 				<form action="#" method="post">
-					<input type="text" placeholder="名字..." required=" " >
-					<input type="text" placeholder="电话..." required=" " >
+					
+					<input type="text" placeholder="姓名..." required=" " >
+					<input type="text" placeholder="手机..." required=" " >
 				</form>
-				<div class="register-check-box">
+				<!-- <div class="register-check-box">
 					<div class="check">
 						<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>订阅新品通知</label>
 					</div>
-				</div>
+				</div> -->
 				<h6>登录信息</h6>
 					<form action="#" method="post">
 					<input type="email" placeholder="电子邮箱" required=" " >
+					<input type="text" placeholder="账号" required=" " >
 					<input type="password" placeholder="密码" required=" " >
 					<input type="password" placeholder="请确认密码" required=" " >
 					<div class="register-check-box">
