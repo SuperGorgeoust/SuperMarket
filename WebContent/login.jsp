@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login</title>
+<title>解忧杂货店</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -59,7 +59,7 @@
 		
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
 				<form>
-					<input type="email" placeholder="电子邮箱" required=" " >
+					<input type="email" placeholder="账号" required=" " >
 					<input type="password" placeholder="密码" required=" " >
 					<div class="forgot">
 						<a href="#">忘记密码?</a>

@@ -3,10 +3,24 @@ package com.market.bean;
 public class User {
 	private Long id;
 	private String name;
+	private String account;
+	public String getAccount() {
+		return account;
+	}
+	public void setAccount(String account) {
+		this.account = account;
+	}
 	private String tel;
 	private Long email;
 	private String pwd;
+	private int isadmin;
 	
+	public int getIsadmin() {
+		return isadmin;
+	}
+	public void setIsadmin(int isadmin) {
+		this.isadmin = isadmin;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -39,7 +53,8 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", tel=" + tel + ", email=" + email + ", pwd=" + pwd + "]";
+		return "User [id=" + id + ", name=" + name + ", account=" + account + ", tel=" + tel + ", email=" + email
+				+ ", pwd=" + pwd + ", isadmin=" + isadmin + "]";
 	}
 	
 }
