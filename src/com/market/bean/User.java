@@ -4,23 +4,10 @@ public class User {
 	private Long id;
 	private String name;
 	private String account;
-	public String getAccount() {
-		return account;
-	}
-	public void setAccount(String account) {
-		this.account = account;
-	}
 	private String tel;
-	private Long email;
+	private String email;
 	private String pwd;
 	private int isadmin;
-	
-	public int getIsadmin() {
-		return isadmin;
-	}
-	public void setIsadmin(int isadmin) {
-		this.isadmin = isadmin;
-	}
 	public Long getId() {
 		return id;
 	}
@@ -33,16 +20,22 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public String getAccount() {
+		return account;
+	}
+	public void setAccount(String account) {
+		this.account = account;
+	}
 	public String getTel() {
 		return tel;
 	}
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
-	public Long getEmail() {
+	public String getEmail() {
 		return email;
 	}
-	public void setEmail(Long email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 	public String getPwd() {
@@ -50,6 +43,12 @@ public class User {
 	}
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
+	}
+	public int getIsadmin() {
+		return isadmin;
+	}
+	public void setIsadmin(int isadmin) {
+		this.isadmin = isadmin;
 	}
 	@Override
 	public String toString() {
