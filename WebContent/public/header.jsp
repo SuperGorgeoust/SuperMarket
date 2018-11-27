@@ -10,7 +10,7 @@
 			<div class="agile-login">
 				<ul>
 					<li><a href="registered.jsp"> 创建新用户 </a></li>
-					<li><a href="login.jsp">登录</a></li>
+					<li><a href="login.jsp">登陆</a></li>
 					<li><a href="contact.jsp">帮助</a></li>
 				</ul>
 			</div>
