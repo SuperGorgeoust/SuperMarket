@@ -1,3 +1,4 @@
+<%@page import="com.market.bean.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <header>
@@ -10,7 +11,16 @@
 			<div class="agile-login">
 				<ul>
 					<li><a href="registered.jsp"> 创建新用户 </a></li>
-					<li><a href="login.jsp">登陆</a></li>
+					<li>
+					<%	
+						User user = (User)request.getSession().getAttribute("loginedUser");
+						if(request.getSession().getAttribute("loginedUser") != null){
+							out.print("<a href="+"\"login.jsp\">"+user.getName()+"</a>");
+						}else{
+							out.print("<a href="+"\"login.jsp\""+">登陆</a>");
+						}
+					%>
+					</li>
 					<li><a href="contact.jsp">帮助</a></li>
 				</ul>
 			</div>
