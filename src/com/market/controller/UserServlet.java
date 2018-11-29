@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.market.biz.UserBiz;
 
@@ -23,7 +24,16 @@ public class UserServlet extends HttpServlet {
 			String op = request.getParameter("op");
 			if("login".equals(op)){
 				login(request,response);
+			}else if("quit".equals(op)){
+				quit(request,response);
 			}
+	}
+
+
+	private void quit(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		HttpSession session=request.getSession();
+		session.removeAttribute("loginedUser");
+		response.sendRedirect("header.jsp");
 	}
 
 

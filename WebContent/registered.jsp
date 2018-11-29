@@ -76,10 +76,10 @@
 					<input type="password" placeholder="请确认密码" required=" " >
 					<div class="register-check-box">
 						<div class="check">
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>我已阅读并接受以上条款协议</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox" onclick="check()"><i> </i>我已阅读并接受以上条款协议</label>
 						</div>
 					</div>
-					<input type="submit" value="注册">
+					<input type="submit" value="注册" id="canUse">
 				</form>
 			</div>
 			<div class="register-home">
@@ -109,6 +109,15 @@
 			$().UItoTop({ easingType: 'easeOutQuart' });
 								
 			});
+		
+		function check(){
+			if(!$("input[type='checkbox']").is(':checked')){
+				$("#canUse").attr("disabled", true).css("background-color","#fe9126");
+			}else{
+				$("#canUse").attr("disabled", false).css("background-color","f60");
+			}
+		}
+		
 	</script>
 <!-- //here ends scrolling icon -->
 <script src="js/minicart.min.js"></script>
