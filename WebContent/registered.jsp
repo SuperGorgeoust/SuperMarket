@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,22 +59,24 @@
 			<h2>新用户注册</h2>
 			<div class="login-form-grids">
 				<h5>个人信息</h5>
-				<form action="#" method="post">
-					
-					<input type="text" placeholder="姓名..." required=" " >
-					<input type="text" placeholder="手机..." required=" " >
-				</form>
+				<form action="user.s" method="post">
+					<input type="hidden" name="op" value="register">
+					<input type="text" placeholder="姓名..." required=" " name="name">
+					<input type="text" placeholder="手机..." required=" " name="tel">
+				<!-- </form> -->
 				<!-- <div class="register-check-box">
 					<div class="check">
 						<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>订阅新品通知</label>
 					</div>
 				</div> -->
 				<h6>登录信息</h6>
-					<form action="#" method="post">
-					<input type="email" placeholder="电子邮箱" required=" " >
-					<input type="text" placeholder="账号" required=" " >
-					<input type="password" placeholder="密码" required=" " >
-					<input type="password" placeholder="请确认密码" required=" " >
+					<!-- <form action="user.s" method="post"> -->
+					<!-- <input type="hidden" name="op" value="register"> -->
+					<input type="email" placeholder="电子邮箱" required=" " name="email">
+					<input type="text" placeholder="账号" required=" " name="account">
+					<input type="password" placeholder="密码" required=" " name="pwd">
+					<input type="password" placeholder="请确认密码" required=" " name="newpwd">
+					
 					<div class="register-check-box">
 						<div class="check">
 							<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>我已阅读并接受以上条款协议</label>
@@ -138,4 +141,11 @@
 <!-- //main slider-banner --> 
 
 </body>
+
+<c:if test="${! empty msg }">
+	<script type="text/javascript">
+		alert('${msg}')
+	</script>
+</c:if>
+
 </html>

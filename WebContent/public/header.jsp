@@ -1,7 +1,10 @@
+<%@page import="com.market.bean.User" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <header>
 <!-- header -->
+<script src="lib/sweet-alert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="lib/sweet-alert.css">
 	<div class="agileits_header">
 		<div class="container">
 			<div class="w3l_offers">
@@ -10,7 +13,16 @@
 			<div class="agile-login">
 				<ul>
 					<li><a href="registered.jsp"> 创建新用户 </a></li>
-					<li><a href="login.jsp">登陆</a></li>
+					<li>
+					<%	
+						User user = (User)request.getSession().getAttribute("loginedUser");
+						if(request.getSession().getAttribute("loginedUser") != null){
+							out.print("<a id="+"\"name\">"+user.getName()+"</a>");
+						}else{
+							out.print("<a href="+"\"login.jsp\""+">登陆</a>");
+						}
+					%>
+					</li>
 					<li><a href="contact.jsp">帮助</a></li>
 				</ul>
 			</div>
@@ -164,3 +176,26 @@
 		
 <!-- //navigation -->
 </header>
+<script type="text/javascript">
+	$("#name").click(function(){
+		swal({
+			  title: "决定要退出了吗？",
+			  text: "您需要重新登陆才能看到购物车清单哦~",
+			  type: "warning",
+			  showCancelButton: true,
+			  confirmButtonColor: "#DD6B55",
+			  confirmButtonText: "Yes",
+			  closeOnConfirm: false
+			},
+			function(){
+			  swal("您已经成功退出啦！", "我们期待与您下次服务~", "success");
+			  $.ajax({
+	                 type: "POST",
+	                 url: "user.s?op=quit",
+	                 cache: false, //不缓存此页面   
+	             });
+			  window.location.reload();
+			});
+	});
+	
+</script>
