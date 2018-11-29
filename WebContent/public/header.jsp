@@ -189,21 +189,13 @@
 			},
 			function(){
 			  swal("您已经成功退出啦！", "我们期待与您下次服务~", "success");
+			  $.ajax({
+	                 type: "POST",
+	                 url: "user.s?op=quit",
+	                 cache: false, //不缓存此页面   
+	             });
+			  window.location.reload();
 			});
 	});
 	
-	$(function (){
-		$("#submit").click(function (){
-			 $.ajax({
-                 type: "POST",
-                 url: "user.s?op=quit",
-                 cache: false, //不缓存此页面   
-             });
-		});
-	})
-	
-	
-	function submit(){
-		
-	}
 </script>

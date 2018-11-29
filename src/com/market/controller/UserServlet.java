@@ -33,7 +33,7 @@ public class UserServlet extends HttpServlet {
 	private void quit(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		HttpSession session=request.getSession();
 		session.removeAttribute("loginedUser");
-		response.sendRedirect("header.jsp");
+		response.sendRedirect("index.jsp");
 	}
 
 

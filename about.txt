@@ -1,0 +1,2 @@
+use 1 for admin login
+use 2 for user login
