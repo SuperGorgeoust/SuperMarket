@@ -15,9 +15,7 @@ public class UserBiz {
 		 * 登陆方法
 		 * 返回登陆成功的用户对象
 		 */
-		
-		
-		
+
 		//查询数据库判断用户是否存在
 		String sql="select * from user where account = ? and pwd = ?";
 		return DBHelper.unique(sql, User.class, username, userpwd);
@@ -34,7 +32,8 @@ public class UserBiz {
 		/*String sql = "insert into user (name,tel,email,pwd,account,isadmin) value(?,?,?,?,?,2)";
 		DBHelper.insert(sql,name,tel,email,pwd,account);*/
 		//有问题
-		if(result!=null){
+		if(result.size()>0){
+			
 			throw new BizException("账号已被注册！");
 		}else{
 			String sql = "insert into user (name,tel,email,pwd,account,isadmin) value(?,?,?,?,?,2)";

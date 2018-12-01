@@ -71,7 +71,7 @@
 				</div> -->
 				<h6>登录信息</h6>
 					<!-- <form action="user.s" method="post"> -->
-					<!-- <input type="hidden" name="op" value="register"> -->
+				
 					<input type="email" placeholder="电子邮箱" required=" " name="email">
 					<input type="text" placeholder="账号" required=" " name="account">
 					<input type="password" placeholder="密码" required=" " name="pwd">
@@ -79,10 +79,10 @@
 					
 					<div class="register-check-box">
 						<div class="check">
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>我已阅读并接受以上条款协议</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox" onclick="check()"><i> </i>我已阅读并接受以上条款协议</label>
 						</div>
 					</div>
-					<input type="submit" value="注册">
+					<input type="submit" value="注册" id="canUse">
 				</form>
 			</div>
 			<div class="register-home">
@@ -112,6 +112,15 @@
 			$().UItoTop({ easingType: 'easeOutQuart' });
 								
 			});
+		
+		function check(){
+			if(!$("input[type='checkbox']").is(':checked')){
+				$("#canUse").attr("disabled", true).css("background-color","#fe9126");
+			}else{
+				$("#canUse").attr("disabled", false).css("background-color","f60");
+			}
+		}
+		
 	</script>
 <!-- //here ends scrolling icon -->
 <script src="js/minicart.min.js"></script>
