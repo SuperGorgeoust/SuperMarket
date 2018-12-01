@@ -109,13 +109,13 @@ public class UserServlet extends HttpServlet {
 
 	private void login(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		String username = request.getParameter("username");
+		String useraccount = request.getParameter("useraccount");
 		String userpwd = request.getParameter("userpwd");
 		
 		User user = null;
 		
 		try {
-			user = ubiz.login(username, userpwd);
+			user = ubiz.login(useraccount, userpwd);
 		} catch (BizException e) {
 			e.printStackTrace();
 			request.setAttribute("msg", e.getMessage());

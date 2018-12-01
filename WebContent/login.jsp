@@ -62,8 +62,8 @@
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
 				<form action="user.s" method="post">
 					<input type="hidden" name="op" value="login">
-					<input type="text" placeholder="账号" required=" " name="username" 
-					value="${param.username}">
+					<input type="text" placeholder="账号" required=" " name="useraccount" 
+					value="${param.useraccount}">
 					<input type="password" placeholder="密码" required=" " name="userpwd" >
 					<div class="forgot">
 						<a href="#">忘记密码?</a>
