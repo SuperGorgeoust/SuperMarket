@@ -109,8 +109,6 @@ public class UserServlet extends HttpServlet {
 
 
 
-
-
 	private void login(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		String useraccount = request.getParameter("useraccount");
