@@ -36,7 +36,8 @@ public class UserServlet extends HttpServlet {
 	}
 
 
-	private void quit(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	private void quit(HttpServletRequest request, HttpServletResponse response) 
+			throws IOException {
 		HttpSession session=request.getSession();
 		session.removeAttribute("loginedUser");
 		response.sendRedirect("index.jsp");
@@ -44,7 +45,9 @@ public class UserServlet extends HttpServlet {
 	}
 
 
-	private void register(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	private void register(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
 		
 		String name = request.getParameter("name");
 		String tel = request.getParameter("tel");
