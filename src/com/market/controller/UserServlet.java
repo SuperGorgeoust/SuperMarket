@@ -48,6 +48,7 @@ public class UserServlet extends HttpServlet {
 	private void register(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
+		
 		String username = request.getParameter("username");
 		String usertel = request.getParameter("usertel");
 		String useremail = request.getParameter("useremail");

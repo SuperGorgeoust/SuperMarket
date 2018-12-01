@@ -64,15 +64,24 @@
 					<input type="text" placeholder="姓名..." required=" " name="username">
 					<input type="text" placeholder="手机..." required=" " name="usertel">
 				<!-- </form> -->
+<<<<<<< HEAD
 				
+=======
+
+>>>>>>> branch 'master' of https://github.com/SuperGorgeoust/SuperMarket.git
 				<h6>登录信息</h6>
 					<!-- <form action="user.s" method="post"> -->
+<<<<<<< HEAD
 				
 					<input type="email" placeholder="电子邮箱" required=" " name="useremail">
 					<input type="text" placeholder="账号" required=" " name="useraccount"style="margin-top: 14px">
 					<input type="password" placeholder="密码" required=" " name="userpwd">
+=======
+					<input type="email" placeholder="电子邮箱" required=" " name="email">
+					<input type="text" placeholder="账号" required=" " name="account" style="margin-top: 14px">
+					<input type="password" placeholder="密码" required=" " name="pwd">
+>>>>>>> branch 'master' of https://github.com/SuperGorgeoust/SuperMarket.git
 					<input type="password" placeholder="请确认密码" required=" " name="newpwd">
-					
 					<div class="register-check-box">
 						<div class="check">
 							<label class="checkbox"><input type="checkbox" name="checkbox" onclick="check()"><i> </i>我已阅读并接受以上条款协议</label>
@@ -116,7 +125,7 @@
 				$("#canUse").attr("disabled", false).css("background-color","f60");
 			}
 		}
-		
+				
 	</script>
 <!-- //here ends scrolling icon -->
 <script src="js/minicart.min.js"></script>
