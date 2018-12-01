@@ -61,20 +61,16 @@
 				<h5>个人信息</h5>
 				<form action="user.s" method="post">
 					<input type="hidden" name="op" value="register">
-					<input type="text" placeholder="姓名..." required=" " name="name">
-					<input type="text" placeholder="手机..." required=" " name="tel">
+					<input type="text" placeholder="姓名..." required=" " name="username">
+					<input type="text" placeholder="手机..." required=" " name="usertel">
 				<!-- </form> -->
-				<!-- <div class="register-check-box">
-					<div class="check">
-						<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>订阅新品通知</label>
-					</div>
-				</div> -->
+				
 				<h6>登录信息</h6>
 					<!-- <form action="user.s" method="post"> -->
 				
-					<input type="email" placeholder="电子邮箱" required=" " name="email">
-					<input type="text" placeholder="账号" required=" " name="account">
-					<input type="password" placeholder="密码" required=" " name="pwd">
+					<input type="email" placeholder="电子邮箱" required=" " name="useremail">
+					<input type="text" placeholder="账号" required=" " name="useraccount"style="margin-top: 14px">
+					<input type="password" placeholder="密码" required=" " name="userpwd">
 					<input type="password" placeholder="请确认密码" required=" " name="newpwd">
 					
 					<div class="register-check-box">
@@ -82,7 +78,7 @@
 							<label class="checkbox"><input type="checkbox" name="checkbox" onclick="check()"><i> </i>我已阅读并接受以上条款协议</label>
 						</div>
 					</div>
-					<input type="submit" value="注册" id="canUse">
+					<input type="submit" value="注册" id="canUse" disabled="disabled">
 				</form>
 			</div>
 			<div class="register-home">

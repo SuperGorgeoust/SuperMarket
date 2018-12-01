@@ -10,7 +10,7 @@ import com.market.dao.DBHelper;
 
 public class UserBiz {
 
-	public User login(String username, String userpwd) throws BizException {
+	public User login(String useraccount, String userpwd) throws BizException {
 		/**
 		 * 登陆方法
 		 * 返回登陆成功的用户对象
@@ -18,7 +18,7 @@ public class UserBiz {
 
 		//查询数据库判断用户是否存在
 		String sql="select * from user where account = ? and pwd = ?";
-		return DBHelper.unique(sql, User.class, username, userpwd);
+		return DBHelper.unique(sql, User.class, useraccount, userpwd);
 	}
 
 	public List<List<Object>> add(String name, String tel, String email, String account, String pwd) throws BizException {
@@ -33,10 +33,10 @@ public class UserBiz {
 		DBHelper.insert(sql,name,tel,email,pwd,account);*/
 		//有问题
 		if(result.size()>0){
-			
 			throw new BizException("账号已被注册！");
 		}else{
 			String sql = "insert into user (name,tel,email,pwd,account,isadmin) value(?,?,?,?,?,2)";
+			
 			return DBHelper.insert(sql,name,tel,email,pwd,account);
 		}
 	}

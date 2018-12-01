@@ -36,7 +36,8 @@ public class UserServlet extends HttpServlet {
 	}
 
 
-	private void quit(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	private void quit(HttpServletRequest request, HttpServletResponse response) 
+			throws IOException {
 		HttpSession session=request.getSession();
 		session.removeAttribute("loginedUser");
 		response.sendRedirect("index.jsp");
@@ -44,13 +45,14 @@ public class UserServlet extends HttpServlet {
 	}
 
 
-	private void register(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String name = request.getParameter("name");
-		String tel = request.getParameter("tel");
-		String email = request.getParameter("email");
-		String account = request.getParameter("account");
-		String pwd = request.getParameter("pwd");
+	private void register(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		String username = request.getParameter("username");
+		String usertel = request.getParameter("usertel");
+		String useremail = request.getParameter("useremail");
+		String useraccount = request.getParameter("useraccount");
+		String userpwd = request.getParameter("userpwd");
 		String newpwd = request.getParameter("newpwd");
 		
 		UserBiz ubiz = new UserBiz();
@@ -58,7 +60,7 @@ public class UserServlet extends HttpServlet {
 		
 		try {
 			
-			user=ubiz.add(name,tel,email,account,pwd);
+			user=ubiz.add(username,usertel,useremail,useraccount,userpwd);
 			
 		} catch (BizException e) {
 			e.printStackTrace();
@@ -67,23 +69,23 @@ public class UserServlet extends HttpServlet {
 			return;
 		}
 		
-		if(name == null || name.trim().isEmpty()){
+		if(username == null || username.trim().isEmpty()){
 			request.setAttribute("msg", "用户名不能为空");
 			//失败
 			request.getRequestDispatcher("login.jsp").forward(request, response);
-		}else if(tel == null || tel.trim().isEmpty()){
+		}else if(usertel == null || usertel.trim().isEmpty()){
 			request.setAttribute("msg", "电话不能为空");
 			//失败
 			request.getRequestDispatcher("login.jsp").forward(request, response);
-		}else if(email == null || email.trim().isEmpty()){
+		}else if(useremail == null || useremail.trim().isEmpty()){
 			request.setAttribute("msg", "邮箱不能为空");
 			//失败
 			request.getRequestDispatcher("login.jsp").forward(request, response);
-		}else if(account == null || account.trim().isEmpty()){
+		}else if(useraccount == null || useraccount.trim().isEmpty()){
 			request.setAttribute("msg", "账号不能为空");
 			//失败
 			request.getRequestDispatcher("login.jsp").forward(request, response);
-		}else if(pwd == null || pwd.trim().isEmpty()){
+		}else if(userpwd == null || userpwd.trim().isEmpty()){
 			request.setAttribute("msg", "密码不能为空");
 			//失败
 			request.getRequestDispatcher("registered.jsp").forward(request, response);
@@ -95,8 +97,12 @@ public class UserServlet extends HttpServlet {
 			//将用户信息保存到会话中
 			/*request.getSession().setAttribute("loginedUser", user);*/
 			//成功
-			response.sendRedirect("login.jsp");
+			request.setAttribute("msg", "注册成功");
+			/*response.sendRedirect("login.jsp");*/
+			request.getRequestDispatcher("login.jsp").forward(request, response);
+			
 		}
+		
 		
 	}
 
@@ -106,13 +112,13 @@ public class UserServlet extends HttpServlet {
 
 	private void login(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		String username = request.getParameter("username");
+		String useraccount = request.getParameter("useraccount");
 		String userpwd = request.getParameter("userpwd");
 		
 		User user = null;
 		
 		try {
-			user = ubiz.login(username, userpwd);
+			user = ubiz.login(useraccount, userpwd);
 		} catch (BizException e) {
 			e.printStackTrace();
 			request.setAttribute("msg", e.getMessage());
