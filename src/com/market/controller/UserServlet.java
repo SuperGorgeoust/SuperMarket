@@ -1,7 +1,9 @@
 package com.market.controller;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,7 +15,9 @@ import javax.servlet.http.HttpSession;
 import com.market.biz.UserBiz;
 
 import com.market.dao.BeanUtils;
-
+import com.market.dao.DBHelper;
+import com.market.utils.Data;
+import com.market.utils.MyUtils;
 import com.market.bean.User;
 import com.market.biz.BizException;
 
@@ -22,6 +26,8 @@ import com.market.biz.BizException;
 public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private UserBiz ubiz = new UserBiz();
+	private MyUtils mu = new MyUtils();
+	private Data d =new Data();
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
@@ -32,7 +38,48 @@ public class UserServlet extends HttpServlet {
 				register(request,response);
 			}else if("quit".equals(op)){
 				quit(request,response);
+			}else if("send".equals(op)){
+				send(request,response);
+			}else if("updatepwd".equals(op)){
+				updatepwd(request,response);
 			}
+	}
+
+
+	private void updatepwd(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		String account = request.getParameter("account");
+		String email = request.getParameter("email");
+		String newpwd = request.getParameter("newpwd");
+		String checkword = request.getParameter("checkword");
+		
+		List<Map<String,Object>> user = ubiz.select(account, email);
+		if(!user.isEmpty()){
+			if(checkword.equals(d.code)){
+				int user2 = ubiz.update(account, newpwd);
+				if(user2>0){
+					request.setAttribute("msg", "密码修改成功");
+					request.getRequestDispatcher("login.jsp").forward(request, response);
+				}else{
+					request.setAttribute("msg", "发生未知错误，请稍后再试");
+					request.getRequestDispatcher("login.jsp").forward(request, response);
+				}
+			}else{
+				request.setAttribute("msg", "验证码有误");
+				request.getRequestDispatcher("login.jsp").forward(request, response);
+			}
+		}else{
+			request.setAttribute("msg", "账号与邮箱不匹配");
+			request.getRequestDispatcher("login.jsp").forward(request, response);
+		}
+	}
+
+
+	private void send(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		String mail = request.getParameter("email");
+		mu.sendMail(mail);
 	}
 
 

@@ -41,6 +41,18 @@ public class UserBiz {
 		}
 	}
 
+	public int update(String account, String newpwd) {
+		String sql = "update user set pwd=? where account=?";
+		int result = DBHelper.update(sql, newpwd, account);
+		return result;
+	}
+
+	public List<Map<String,Object>> select(String account, String email) {
+		String sql = "select * from user where account=? and email=?";
+		List<Map<String, Object>> user = DBHelper.select(sql, account, email);
+		return user;
+	}
+
 	
 
 }
