@@ -75,7 +75,7 @@
 						</span>
 					</div>
 					<div class="w3agile_description">
-						<h4>Description :</h4>
+						<h4>商品详情 :</h4>
 						<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
 							officia deserunt mollit anim id est laborum.Duis aute irure dolor in 
 							reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
@@ -83,7 +83,7 @@
 					</div>
 					<div class="snipcart-item block">
 						<div class="snipcart-thumb agileinfo_single_right_snipcart">
-							<h4 class="m-sing">$21.00 <span>$25.00</span></h4>
+							<h4 class="m-sing">¥21.00 <span>¥25.00</span></h4>
 						</div>
 						<div class="snipcart-details agileinfo_single_right_details">
 							<form action="#" method="post">
@@ -94,7 +94,7 @@
 									<input type="hidden" name="item_name" value="pulao basmati rice">
 									<input type="hidden" name="amount" value="21.00">
 									<input type="hidden" name="discount_amount" value="1.00">
-									<input type="hidden" name="currency_code" value="USD">
+									<input type="hidden" name="currency_code" value="CNY">
 									<input type="hidden" name="return" value=" ">
 									<input type="hidden" name="cancel_return" value=" ">
 									<input type="submit" name="submit" value="Add to cart" class="button">
@@ -142,7 +142,7 @@
 														<input type="hidden" name="item_name" value="Fortune Sunflower Oil">
 														<input type="hidden" name="amount" value="35.99">
 														<input type="hidden" name="discount_amount" value="1.00">
-														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="currency_code" value="CNY">
 														<input type="hidden" name="return" value=" ">
 														<input type="hidden" name="cancel_return" value=" ">
 														<input type="submit" name="submit" value="Add to cart" class="button">
@@ -174,7 +174,7 @@
 													<i class="fa fa-star blue-star" aria-hidden="true"></i>
 													<i class="fa fa-star gray-star" aria-hidden="true"></i>
 												</div>
-													<h4>$30.99 <span>$45.00</span></h4>
+													<h4>¥30.99 <span>¥45.00</span></h4>
 											</div>
 											<div class="snipcart-details top_brand_home_details">
 												<form action="#" method="post">
@@ -185,7 +185,7 @@
 															<input type="hidden" name="item_name" value="basmati rise">
 															<input type="hidden" name="amount" value="30.99">
 															<input type="hidden" name="discount_amount" value="1.00">
-															<input type="hidden" name="currency_code" value="USD">
+															<input type="hidden" name="currency_code" value="CNY">
 															<input type="hidden" name="return" value=" ">
 															<input type="hidden" name="cancel_return" value=" ">
 															<input type="submit" name="submit" value="Add to cart" class="button">
@@ -220,7 +220,7 @@
 													<i class="fa fa-star blue-star" aria-hidden="true"></i>
 													<i class="fa fa-star gray-star" aria-hidden="true"></i>
 												</div>
-													<h4>$80.99 <span>$105.00</span></h4>
+													<h4>¥80.99 <span>¥105.00</span></h4>
 											</div>
 											<div class="snipcart-details top_brand_home_details">
 												<form action="#" method="post">
@@ -231,7 +231,7 @@
 														<input type="hidden" name="item_name" value="Pepsi soft drink">
 														<input type="hidden" name="amount" value="80.00">
 														<input type="hidden" name="discount_amount" value="1.00">
-														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="currency_code" value="CNY">
 														<input type="hidden" name="return" value=" ">
 														<input type="hidden" name="cancel_return" value=" ">
 														<input type="submit" name="submit" value="Add to cart" class="button">
@@ -274,7 +274,7 @@
 														<input type="hidden" name="item_name" value="Fortune Sunflower Oil">
 														<input type="hidden" name="amount" value="35.99">
 														<input type="hidden" name="discount_amount" value="1.00">
-														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="currency_code" value="CNY">
 														<input type="hidden" name="return" value=" ">
 														<input type="hidden" name="cancel_return" value=" ">
 														<input type="submit" name="submit" value="Add to cart" class="button">
@@ -298,6 +298,17 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 <!-- top-header and slider -->
+<script src="js/minicart.min.js"></script>
+<script>
+	// Mini Cart
+	paypal.minicart.render({
+		action: 'cart.s?op=sub'
+	});
+
+	if (~window.location.search.indexOf('reset=true')) {
+		paypal.minicart.reset();
+	}
+</script>
 <!-- here stars scrolling icon -->
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -315,17 +326,6 @@
 			});
 	</script>
 <!-- //here ends scrolling icon -->
-<script src="js/minicart.min.js"></script>
-<script>
-	// Mini Cart
-	paypal.minicart.render({
-		action: '#'
-	});
-
-	if (~window.location.search.indexOf('reset=true')) {
-		paypal.minicart.reset();
-	}
-</script>
 <!-- main slider-banner -->
 <script src="js/skdslider.min.js"></script>
 <link href="css/skdslider.css" rel="stylesheet">

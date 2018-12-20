@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -103,7 +104,7 @@
 															value="Fortune Sunflower Oil"> <input
 															type="hidden" name="amount" value="35.99"> <input
 															type="hidden" name="discount_amount" value="1.00">
-														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="currency_code" value="CNY">
 														<input type="hidden" name="return" value=" "> <input
 															type="hidden" name="cancel_return" value=" "> <input
 															type="submit" name="submit" value="Add to cart"
@@ -143,7 +144,7 @@
 															type="hidden" name="item_name" value="basmati rise">
 														<input type="hidden" name="amount" value="30.99">
 														<input type="hidden" name="discount_amount" value="1.00">
-														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="currency_code" value="CNY">
 														<input type="hidden" name="return" value=" "> <input
 															type="hidden" name="cancel_return" value=" "> <input
 															type="submit" name="submit" value="Add to cart"
@@ -186,7 +187,7 @@
 															type="hidden" name="item_name" value="Pepsi soft drink">
 														<input type="hidden" name="amount" value="80.00">
 														<input type="hidden" name="discount_amount" value="1.00">
-														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="currency_code" value="CNY">
 														<input type="hidden" name="return" value=" "> <input
 															type="hidden" name="cancel_return" value=" "> <input
 															type="submit" name="submit" value="Add to cart"
@@ -230,7 +231,7 @@
 															value="Fortune Sunflower Oil"> <input
 															type="hidden" name="amount" value="35.99"> <input
 															type="hidden" name="discount_amount" value="1.00">
-														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="currency_code" value="CNY">
 														<input type="hidden" name="return" value=" "> <input
 															type="hidden" name="cancel_return" value=" "> <input
 															type="submit" name="submit" value="Add to cart"
@@ -270,7 +271,7 @@
 															type="hidden" name="item_name" value="basmati rise">
 														<input type="hidden" name="amount" value="30.99">
 														<input type="hidden" name="discount_amount" value="1.00">
-														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="currency_code" value="CNY">
 														<input type="hidden" name="return" value=" "> <input
 															type="hidden" name="cancel_return" value=" "> <input
 															type="submit" name="submit" value="Add to cart"
@@ -313,7 +314,7 @@
 															type="hidden" name="item_name" value="Pepsi soft drink">
 														<input type="hidden" name="amount" value="80.00">
 														<input type="hidden" name="discount_amount" value="1.00">
-														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="currency_code" value="CNY">
 														<input type="hidden" name="return" value=" "> <input
 															type="hidden" name="cancel_return" value=" "> <input
 															type="submit" name="submit" value="Add to cart"
@@ -357,7 +358,7 @@
 															value="Fortune Sunflower Oil"> <input
 															type="hidden" name="amount" value="35.99"> <input
 															type="hidden" name="discount_amount" value="1.00">
-														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="currency_code" value="CNY">
 														<input type="hidden" name="return" value=" "> <input
 															type="hidden" name="cancel_return" value=" "> <input
 															type="submit" name="submit" value="Add to cart"
@@ -397,7 +398,7 @@
 															type="hidden" name="item_name" value="basmati rise">
 														<input type="hidden" name="amount" value="30.99">
 														<input type="hidden" name="discount_amount" value="1.00">
-														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="currency_code" value="CNY">
 														<input type="hidden" name="return" value=" "> <input
 															type="hidden" name="cancel_return" value=" "> <input
 															type="submit" name="submit" value="Add to cart"
@@ -440,7 +441,7 @@
 															type="hidden" name="item_name" value="Pepsi soft drink">
 														<input type="hidden" name="amount" value="80.00">
 														<input type="hidden" name="discount_amount" value="1.00">
-														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="currency_code" value="CNY">
 														<input type="hidden" name="return" value=" "> <input
 															type="hidden" name="cancel_return" value=" "> <input
 															type="submit" name="submit" value="Add to cart"
@@ -482,6 +483,17 @@
 	<!-- Bootstrap Core JavaScript -->
 	<script src="js/bootstrap.min.js"></script>
 	<!-- top-header and slider -->
+	<script src="js/minicart.min.js"></script>
+	<script>
+	// Mini Cart
+	paypal.minicart.render({
+		action: 'cart.s?op=sub'
+	});
+
+	if (~window.location.search.indexOf('reset=true')) {
+		paypal.minicart.reset();
+	}
+</script>
 	<!-- here stars scrolling icon -->
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -501,17 +513,6 @@
 		});
 	</script>
 	<!-- //here ends scrolling icon -->
-	<script src="js/minicart.min.js"></script>
-	<script>
-		// Mini Cart
-		paypal.minicart.render({
-			action : '#'
-		});
-
-		if (~window.location.search.indexOf('reset=true')) {
-			paypal.minicart.reset();
-		}
-	</script>
 	<!-- main slider-banner -->
 	<script src="js/skdslider.min.js"></script>
 	<link href="css/skdslider.css" rel="stylesheet">
@@ -528,4 +529,12 @@
 	<!-- //main slider-banner -->
 
 </body>
+
+<c:if test="${ ! empty msg }">
+	<script type="text/javascript">
+		//报错的js脚本，应该是msg!=null 才执行
+		alert('${msg}');
+	</script>
+</c:if>
+
 </html>

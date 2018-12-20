@@ -42,7 +42,27 @@ public class UserServlet extends HttpServlet {
 				send(request,response);
 			}else if("updatepwd".equals(op)){
 				updatepwd(request,response);
+			}else if("advice".equals(op)){
+				advice(request,response);
 			}
+	}
+
+
+	private void advice(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+		String uname = request.getParameter("uname");
+		String uemail = request.getParameter("uemail");
+		String adv = request.getParameter("adv");
+		
+		String sql = "insert into advice values(null,?,?,?)";
+		int result = DBHelper.update(sql, uname, uemail, adv);
+		if(result>0){
+			request.setAttribute("msg", "我们收到了您的信息，谢谢您的反馈");
+			request.getRequestDispatcher("contact.jsp").forward(request, response);
+		}else{
+			request.setAttribute("msg", "发生未知错误，请稍后再试");
+			request.getRequestDispatcher("contact.jsp").forward(request, response);
+		}
 	}
 
 

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,8 +47,8 @@
 	<div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
-				<li><a href="index.jsp"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-				<li class="active">Contact</li>
+				<li><a href="index.jsp"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>首页</a></li>
+				<li class="active">联系我们</li>
 			</ol>
 		</div>
 	</div>
@@ -57,15 +58,15 @@
 		<div class="w3_agileits_contact_grids">
 			<div class="col-md-6 w3_agileits_contact_grid_left">
 				<div class="agile_map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.3905851087434!2d-34.90500565012194!3d-8.061582082752993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18d90992e4ab%3A0x8e83c4afabe39a3a!2sSport+Club+Do+Recife!5e0!3m2!1sen!2sin!4v1478684415917" style="border:0"></iframe>
+					<iframe src="https://www.amap.com/place/B02DE02W7A" style="border:0"></iframe>
 				</div>
 				<div class="agileits_w3layouts_map_pos">
 					<div class="agileits_w3layouts_map_pos1">
-						<h3>Contact Info</h3>
-						<p>1234k Avenue, 4th block, New York City.</p>
+						<h3>联系信息</h3>
+						<p>湖南省衡阳市珠晖区湖南工学院</p>
 						<ul class="wthree_contact_info_address">
-							<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-							<li><i class="fa fa-phone" aria-hidden="true"></i>+(0123) 232 232</li>
+							<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:954502872@qq.com">954502872@qq.com</a></li>
+							<li><i class="fa fa-phone" aria-hidden="true"></i>+(86)17777777777</li>
 						</ul>
 						<div class="w3_agile_social_icons w3_agile_social_icons_contact">
 							<ul>
@@ -78,23 +79,23 @@
 				</div>
 			</div>
 			<div class="col-md-6 w3_agileits_contact_grid_right">
-				<h2 class="w3_agile_header">Leave a<span> Message</span></h2>
+				<h2 class="w3_agile_header">给我们<span> 留言</span></h2>
 
-				<form action="#" method="post">
+				<form action="user.s?op=advice" method="post">
 					<span class="input input--ichiro">
-						<input class="input__field input__field--ichiro" type="text" id="input-25" name="Name" placeholder=" " required="" />
+						<input class="input__field input__field--ichiro" type="text" id="input-25" name="uname" placeholder=" " required="" />
 						<label class="input__label input__label--ichiro" for="input-25">
-							<span class="input__label-content input__label-content--ichiro">Your Name</span>
+							<span class="input__label-content input__label-content--ichiro">您的姓名</span>
 						</label>
 					</span>
 					<span class="input input--ichiro">
-						<input class="input__field input__field--ichiro" type="email" id="input-26" name="Email" placeholder=" " required="" />
+						<input class="input__field input__field--ichiro" type="email" id="input-26" name="uemail" placeholder=" " required="" />
 						<label class="input__label input__label--ichiro" for="input-26">
-							<span class="input__label-content input__label-content--ichiro">Your Email</span>
+							<span class="input__label-content input__label-content--ichiro">您的邮箱</span>
 						</label>
 					</span>
-					<textarea name="Message" placeholder="Your message here..." required=""></textarea>
-					<input type="submit" value="Submit">
+					<textarea name="adv" placeholder="您想说的话..." required=""></textarea>
+					<input type="submit" value="提交">
 				</form>
 			</div>
 			<div class="clearfix"> </div>
@@ -108,6 +109,17 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 <!-- top-header and slider -->
+<script src="js/minicart.min.js"></script>
+<script>
+	// Mini Cart
+	paypal.minicart.render({
+		action: 'cart.s?op=sub'
+	});
+
+	if (~window.location.search.indexOf('reset=true')) {
+		paypal.minicart.reset();
+	}
+</script>
 <!-- here stars scrolling icon -->
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -124,18 +136,6 @@
 								
 			});
 	</script>
-<!-- //here ends scrolling icon -->
-<script src="js/minicart.min.js"></script>
-<script>
-	// Mini Cart
-	paypal.minicart.render({
-		action: '#'
-	});
-
-	if (~window.location.search.indexOf('reset=true')) {
-		paypal.minicart.reset();
-	}
-</script>
 <!-- main slider-banner -->
 <script src="js/skdslider.min.js"></script>
 <link href="css/skdslider.css" rel="stylesheet">
@@ -152,4 +152,12 @@
 <!-- //main slider-banner --> 
 
 </body>
+
+<c:if test="${ ! empty msg }">
+	<script type="text/javascript">
+		//报错的js脚本，应该是msg!=null 才执行
+		alert('${msg}');
+	</script>
+</c:if>
+
 </html>

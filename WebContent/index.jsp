@@ -48,20 +48,20 @@
 				<img src="images/11.jpg" alt="" />
 				<!--Slider Description example-->
 				<div class="slide-desc">
-					<h3>Buy Rice Products Are Now On Line With Us</h3>
+					<h3>买东西还去实体店吗？</h3>
 				</div>
 			</li>
 			<li>
 				<img src="images/22.jpg" alt="" />
 				  <div class="slide-desc">
-					<h3>Whole Spices Products Are Now On Line With Us</h3>
+					<h3>所有商品任你选购</h3>
 				</div>
 			</li>
 			
 			<li>
 				<img src="images/44.jpg" alt="" />
 				<div class="slide-desc">
-					<h3>Whole Spices Products Are Now On Line With Us</h3>
+					<h3>线上购买体验不一样的购物方式</h3>
 				</div>
 			</li>
 		</ul>
@@ -112,10 +112,10 @@
 																	<input type="hidden" name="cmd" value="_cart" />
 																	<input type="hidden" name="add" value="1" />
 																	<input type="hidden" name="business" value=" " />
-																	<input type="hidden" name="item_name" value="Fortune Sunflower Oil" />
+																	<input type="hidden" name="item_name" value="谷粒多" />
 																	<input type="hidden" name="amount" value="20.99" />
 																	<input type="hidden" name="discount_amount" value="1.00" />
-																	<input type="hidden" name="currency_code" value="USD" />
+																	<input type="hidden" name="currency_code" value="CNY" />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<input type="submit" name="submit" value="Add to cart" class="button" />
@@ -139,7 +139,7 @@
 													<div class="snipcart-item block" >
 														<div class="snipcart-thumb">
 															<a href="products.jsp"><img title=" " alt=" " src="images/2.png" /></a>		
-															<p>Fortune-sunflower</p>
+															<p>特仑苏</p>
 															<div class="stars">
 																<i class="fa fa-star blue-star" aria-hidden="true"></i>
 																<i class="fa fa-star blue-star" aria-hidden="true"></i>
@@ -155,10 +155,10 @@
 																	<input type="hidden" name="cmd" value="_cart" />
 																	<input type="hidden" name="add" value="1" />
 																	<input type="hidden" name="business" value=" " />
-																	<input type="hidden" name="item_name" value="basmati rise" />
+																	<input type="hidden" name="item_name" value="特仑苏" />
 																	<input type="hidden" name="amount" value="20.99" />
 																	<input type="hidden" name="discount_amount" value="1.00" />
-																	<input type="hidden" name="currency_code" value="USD" />
+																	<input type="hidden" name="currency_code" value="CNY" />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<input type="submit" name="submit" value="Add to cart" class="button" />
@@ -182,7 +182,7 @@
 													<div class="snipcart-item block">
 														<div class="snipcart-thumb">
 															<a href="products.jsp"><img src="images/3.png" alt=" " class="img-responsive" /></a>
-															<p>Aashirvaad-atta</p>
+															<p>谷粒多1</p>
 															<div class="stars">
 																<i class="fa fa-star blue-star" aria-hidden="true"></i>
 																<i class="fa fa-star blue-star" aria-hidden="true"></i>
@@ -198,10 +198,10 @@
 																	<input type="hidden" name="cmd" value="_cart" />
 																	<input type="hidden" name="add" value="1" />
 																	<input type="hidden" name="business" value=" " />
-																	<input type="hidden" name="item_name" value="Pepsi soft drink" />
+																	<input type="hidden" name="item_name" value="谷粒多1" />
 																	<input type="hidden" name="amount" value="40.00" />
 																	<input type="hidden" name="discount_amount" value="1.00" />
-																	<input type="hidden" name="currency_code" value="USD" />
+																	<input type="hidden" name="currency_code" value="CNY" />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<input type="submit" name="submit" value="Add to cart" class="button" />
@@ -228,7 +228,7 @@
 													<div class="snipcart-item block" >
 														<div class="snipcart-thumb">
 															<a href="products.jsp"><img title=" " alt=" " src="images/4.png" /></a>		
-															<p>Sampann-toor-dal</p>
+															<p>大米大1</p>
 															<div class="stars">
 																<i class="fa fa-star blue-star" aria-hidden="true"></i>
 																<i class="fa fa-star blue-star" aria-hidden="true"></i>
@@ -244,10 +244,10 @@
 																	<input type="hidden" name="cmd" value="_cart" />
 																	<input type="hidden" name="add" value="1" />
 																	<input type="hidden" name="business" value=" " />
-																	<input type="hidden" name="item_name" value="Fortune Sunflower Oil" />
+																	<input type="hidden" name="item_name" value="大米大1" />
 																	<input type="hidden" name="amount" value="35.99" />
 																	<input type="hidden" name="discount_amount" value="1.00" />
-																	<input type="hidden" name="currency_code" value="USD" />
+																	<input type="hidden" name="currency_code" value="CNY" />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<input type="submit" name="submit" value="Add to cart" class="button" />
@@ -290,7 +290,7 @@
 																	<input type="hidden" name="item_name" value="basmati rise" />
 																	<input type="hidden" name="amount" value="30.99" />
 																	<input type="hidden" name="discount_amount" value="1.00" />
-																	<input type="hidden" name="currency_code" value="USD" />
+																	<input type="hidden" name="currency_code" value="CNY" />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<input type="submit" name="submit" value="Add to cart" class="button" />
@@ -336,7 +336,7 @@
 																	<input type="hidden" name="item_name" value="Pepsi soft drink" />
 																	<input type="hidden" name="amount" value="80.00" />
 																	<input type="hidden" name="discount_amount" value="1.00" />
-																	<input type="hidden" name="currency_code" value="USD" />
+																	<input type="hidden" name="currency_code" value="CNY" />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<input type="submit" name="submit" value="Add to cart" class="button" />
@@ -388,7 +388,7 @@
 																	<input type="hidden" name="item_name" value="Fortune Sunflower Oil" />
 																	<input type="hidden" name="amount" value="35.99" />
 																	<input type="hidden" name="discount_amount" value="1.00" />
-																	<input type="hidden" name="currency_code" value="USD" />
+																	<input type="hidden" name="currency_code" value="CNY" />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<input type="submit" name="submit" value="Add to cart" class="button" />
@@ -431,7 +431,7 @@
 																	<input type="hidden" name="item_name" value="basmati rise" />
 																	<input type="hidden" name="amount" value="30.99" />
 																	<input type="hidden" name="discount_amount" value="1.00" />
-																	<input type="hidden" name="currency_code" value="USD" />
+																	<input type="hidden" name="currency_code" value="CNY" />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<input type="submit" name="submit" value="Add to cart" class="button" />
@@ -477,7 +477,7 @@
 																	<input type="hidden" name="item_name" value="Pepsi soft drink" />
 																	<input type="hidden" name="amount" value="80.00" />
 																	<input type="hidden" name="discount_amount" value="1.00" />
-																	<input type="hidden" name="currency_code" value="USD" />
+																	<input type="hidden" name="currency_code" value="CNY" />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<input type="submit" name="submit" value="Add to cart" class="button" />
@@ -523,7 +523,7 @@
 																	<input type="hidden" name="item_name" value="Fortune Sunflower Oil" />
 																	<input type="hidden" name="amount" value="20.99" />
 																	<input type="hidden" name="discount_amount" value="1.00" />
-																	<input type="hidden" name="currency_code" value="USD" />
+																	<input type="hidden" name="currency_code" value="CNY" />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<input type="submit" name="submit" value="Add to cart" class="button" />
@@ -566,7 +566,7 @@
 																	<input type="hidden" name="item_name" value="basmati rise" />
 																	<input type="hidden" name="amount" value="20.99" />
 																	<input type="hidden" name="discount_amount" value="1.00" />
-																	<input type="hidden" name="currency_code" value="USD" />
+																	<input type="hidden" name="currency_code" value="CNY" />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<input type="submit" name="submit" value="Add to cart" class="button" />
@@ -609,7 +609,7 @@
 																	<input type="hidden" name="item_name" value="Pepsi soft drink" />
 																	<input type="hidden" name="amount" value="40.00" />
 																	<input type="hidden" name="discount_amount" value="1.00" />
-																	<input type="hidden" name="currency_code" value="USD" />
+																	<input type="hidden" name="currency_code" value="CNY" />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<input type="submit" name="submit" value="Add to cart" class="button" />
@@ -836,7 +836,7 @@
 														<input type="hidden" name="item_name" value="Fortune Sunflower Oil">
 														<input type="hidden" name="amount" value="35.99">
 														<input type="hidden" name="discount_amount" value="1.00">
-														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="currency_code" value="CNY">
 														<input type="hidden" name="return" value=" ">
 														<input type="hidden" name="cancel_return" value=" ">
 														<input type="submit" name="submit" value="Add to cart" class="button">
@@ -879,7 +879,7 @@
 															<input type="hidden" name="item_name" value="basmati rise">
 															<input type="hidden" name="amount" value="30.99">
 															<input type="hidden" name="discount_amount" value="1.00">
-															<input type="hidden" name="currency_code" value="USD">
+															<input type="hidden" name="currency_code" value="CNY">
 															<input type="hidden" name="return" value=" ">
 															<input type="hidden" name="cancel_return" value=" ">
 															<input type="submit" name="submit" value="Add to cart" class="button">
@@ -925,7 +925,7 @@
 														<input type="hidden" name="item_name" value="Pepsi soft drink">
 														<input type="hidden" name="amount" value="80.00">
 														<input type="hidden" name="discount_amount" value="1.00">
-														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="currency_code" value="CNY">
 														<input type="hidden" name="return" value=" ">
 														<input type="hidden" name="cancel_return" value=" ">
 														<input type="submit" name="submit" value="Add to cart" class="button">
@@ -968,7 +968,7 @@
 														<input type="hidden" name="item_name" value="Fortune Sunflower Oil">
 														<input type="hidden" name="amount" value="35.99">
 														<input type="hidden" name="discount_amount" value="1.00">
-														<input type="hidden" name="currency_code" value="USD">
+														<input type="hidden" name="currency_code" value="CNY">
 														<input type="hidden" name="return" value=" ">
 														<input type="hidden" name="cancel_return" value=" ">
 														<input type="submit" name="submit" value="Add to cart" class="button">
@@ -993,6 +993,17 @@
 <script src="js/bootstrap.min.js"></script>
 
 <!-- top-header and slider -->
+<script src="js/minicart.min.js"></script>
+<script>
+	// Mini Cart
+	paypal.minicart.render({
+		action: 'cart.s?op=sub'
+	});
+
+	if (~window.location.search.indexOf('reset=true')) {
+		paypal.minicart.reset();
+	}
+</script>
 <!-- here stars scrolling icon -->
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -1010,17 +1021,6 @@
 			});
 	</script>
 <!-- //here ends scrolling icon -->
-<script src="js/minicart.min.js"></script>
-<script>
-	// Mini Cart
-	paypal.minicart.render({
-		action: '#'
-	});
-
-	if (~window.location.search.indexOf('reset=true')) {
-		paypal.minicart.reset();
-	}
-</script>
 <!-- main slider-banner -->
 <script src="js/skdslider.min.js"></script>
 <link href="css/skdslider.css" rel="stylesheet">

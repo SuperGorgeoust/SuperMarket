@@ -176,6 +176,7 @@
 		
 <!-- //navigation -->
 </header>
+
 <script type="text/javascript">
 	$("#name").click(function(){
 		swal({
