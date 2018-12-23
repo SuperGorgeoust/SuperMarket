@@ -61,14 +61,14 @@
 				<h5>个人信息</h5>
 				<form action="user.s" method="post">
 					<input type="hidden" name="op" value="register">
-					<input type="text" placeholder="姓名..." required=" " name="username">
-					<input type="text" placeholder="手机..." required=" " name="usertel">
+					<input type="text" placeholder="姓名..." required=" " name="username" value="${param.username}">
+					<input type="text" placeholder="手机..." required=" " name="usertel" value="${param.usertel}">
 
 				<h6>登录信息</h6>
 					
 				
-					<input type="email" placeholder="电子邮箱" required=" " name="useremail">
-					<input type="text" placeholder="账号" required=" " name="useraccount"style="margin-top: 14px">
+					<input type="email" placeholder="电子邮箱" required=" " name="useremail" value="${param.useremail}">
+					<input type="text" placeholder="账号" required=" " name="useraccount" style="margin-top: 14px" value="${param.useraccount}">
 					<input type="password" placeholder="密码" required=" " name="userpwd">
 					<input type="password" placeholder="请确认密码" required=" " name="newpwd">
 					<div class="register-check-box">

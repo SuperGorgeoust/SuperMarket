@@ -156,7 +156,7 @@
 																	<input type="hidden" name="add" value="1" />
 																	<input type="hidden" name="business" value=" " />
 																	<input type="hidden" name="item_name" value="特仑苏" />
-																	<input type="hidden" name="amount" value="20.99" />
+																	<input type="hidden" name="amount" value="11.00" />
 																	<input type="hidden" name="discount_amount" value="1.00" />
 																	<input type="hidden" name="currency_code" value="CNY" />
 																	<input type="hidden" name="return" value=" " />

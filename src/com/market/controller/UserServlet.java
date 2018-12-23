@@ -126,16 +126,7 @@ public class UserServlet extends HttpServlet {
 		UserBiz ubiz = new UserBiz();
 		List<List<Object>> user = null;
 		
-		try {
-			
-			user=ubiz.add(username,usertel,useremail,useraccount,userpwd);
-			
-		} catch (BizException e) {
-			e.printStackTrace();
-			request.setAttribute("msg", e.getMessage());
-			request.getRequestDispatcher("registered.jsp").forward(request, response);
-			return;
-		}
+		
 		
 		if(username == null || username.trim().isEmpty()){
 			request.setAttribute("msg", "用户名不能为空");
@@ -161,13 +152,28 @@ public class UserServlet extends HttpServlet {
 			request.setAttribute("msg", "第二次密码不能为空");
 			//失败
 			request.getRequestDispatcher("registered.jsp").forward(request, response);
+		}else if(!newpwd.equals(userpwd)){
+			request.setAttribute("msg", "两次密码不一致");
+			//失败
+			request.getRequestDispatcher("registered.jsp").forward(request, response);
 		}else{
 			//将用户信息保存到会话中
 			/*request.getSession().setAttribute("loginedUser", user);*/
 			//成功
-			request.setAttribute("msg", "注册成功");
-			/*response.sendRedirect("login.jsp");*/
-			request.getRequestDispatcher("login.jsp").forward(request, response);
+						
+			try {
+				
+				user=ubiz.add(username,usertel,useremail,useraccount,userpwd);
+				request.setAttribute("msg", "注册成功");
+				
+				request.getRequestDispatcher("login.jsp").forward(request, response);
+
+			} catch (BizException e) {
+				e.printStackTrace();
+				request.setAttribute("msg", e.getMessage());
+				request.getRequestDispatcher("registered.jsp").forward(request, response);
+				return;
+			}
 			
 		}
 		
